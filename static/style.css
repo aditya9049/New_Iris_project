@@ -1,0 +1,100 @@
+/* Full page container */
+.container {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertical center */
+    align-items: center;     /* Horizontal center */
+    transition: background-color 0.5s ease;
+    padding: 20px;
+}
+
+/* Form styling */
+.container form {
+    background-color: #ffffff;
+    padding: 35px 50px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+/* Form hover animation */
+.container form:hover {
+    transform: scale(1.05);
+}
+
+/* Input fields */
+.container input[type=number] {
+    padding: 12px;
+    margin: 10px;
+    width: 260px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Input focus animation */
+.container input[type=number]:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
+    outline: none;
+}
+
+/* Button styling */
+.container button {
+    padding: 12px 35px;
+    margin-top: 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Button hover */
+.container button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Prediction box */
+.container .result {
+    margin-top: 30px;
+    font-size: 26px;
+    font-weight: bold;
+    padding: 18px 25px;
+    border-radius: 15px;
+    display: inline-block;
+    animation: fadeIn 1s ease forwards;
+    color: white;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Flower colors */
+.result.setosa {
+    background-color: #FF7F50; /* Coral */
+}
+
+.result.versicolor {
+    background-color: #20B2AA; /* LightSeaGreen */
+}
+
+.result.virginica {
+    background-color: #9370DB; /* MediumPurple */
+}
+
+/* Header */
+.container h2 {
+    margin-bottom: 35px;
+    font-size: 34px;
+    color: #333;
+}
